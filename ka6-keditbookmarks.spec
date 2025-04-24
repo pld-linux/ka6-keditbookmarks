@@ -61,6 +61,8 @@ ctest --test-dir build
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
 
+rm -rf $RPM_BUILD_ROOT%{_mandir}/zh_CN
+
 %find_lang %{kaname} --all-name --with-kde
 
 %clean
@@ -99,5 +101,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/sv/man1/kbookmarkmerger.1*
 %{_mandir}/tr/man1/kbookmarkmerger.1*
 %{_mandir}/uk/man1/kbookmarkmerger.1*
-%{_mandir}/zh_CN/man1/kbookmarkmerger.1*
 %{_datadir}/qlogging-categories6/keditbookmarks.categories
