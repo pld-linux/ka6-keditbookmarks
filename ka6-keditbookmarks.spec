@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	6.8
 %define		qtver		6.6
 %define		kaname		keditbookmarks
 Summary:	Edit bookmarks
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	31fb9c674fed652dbdd61451699c280c
+# Source0-md5:	6422ad5254367660b98ab274a6110dac
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= %{qtver}
@@ -84,7 +84,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc DESIGN TODO
 %attr(755,root,root) %{_bindir}/kbookmarkmerger
 %attr(755,root,root) %{_bindir}/keditbookmarks
-%attr(755,root,root) %{_libdir}/libkbookmarkmodel_private.so.*.*
+%{_libdir}/libkbookmarkmodel_private.so.*.*
 %ghost %{_libdir}/libkbookmarkmodel_private.so.6
 %{_desktopdir}/org.kde.keditbookmarks.desktop
 %{_datadir}/config.kcfg/keditbookmarks.kcfg
